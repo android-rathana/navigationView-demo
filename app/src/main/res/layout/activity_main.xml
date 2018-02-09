@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context="com.example.ratha.navigationdrawerdemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--set up toolbar layout-->
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            android:elevation="5dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_frame"/>
+    </LinearLayout>
+    <!--set up navigation drawer layout-->
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/nav_item_menu"
+        app:headerLayout="@layout/nav_header_layout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_footer_text"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:layout_marginRight="5dp"/>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
